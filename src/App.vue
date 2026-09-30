@@ -5,7 +5,7 @@ const name="Hola parce";
 </script>
 
 <template>
-  <h1> Hola {{ name }} </h1>
+  <h1> Hello {{ name }} </h1>
   
   </template>
 
