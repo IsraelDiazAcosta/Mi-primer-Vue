@@ -11,6 +11,9 @@ const increment=()=>{
 const disminuir=() =>{
   counter.value--;
 }
+const reset=() =>{
+  counter.value =0;
+}
 </script>
 
 <template>
@@ -19,6 +22,7 @@ const disminuir=() =>{
   </h2>
   <button @click="increment">Aumentar el contador</button>
   <button @click="disminuir">Disminuye el contador</button>
+  <button @click="reset">Resetea el contador</button>
  
  
   </template>
