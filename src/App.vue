@@ -1,19 +1,26 @@
 
 <script setup>
+import { ref } from 'vue';
 const name="Hola parce";
 
-const handleClick=(message)=>{
-  console.log('message')
+const counter=ref(0);
+const increment=()=>{
+  counter.value++;
+}  
+
+const disminuir=() =>{
+  counter.value--;
 }
-      
 </script>
 
 <template>
-  <h1> Hola {{ name .toUpperCase()}} </h1>
-  <button v-on:click="handleClick('me activaste')">Activame bro</button>
-  <button @click="handleClick('me activaste')">Activame bro</button>
-
-  
+  <h2  :style="{color:counter<0 ? 'red':counter>0 ? 'green': 'black'}">
+    {{ counter }}
+  </h2>
+  <button @click="increment">Aumentar el contador</button>
+  <button @click="disminuir">Disminuye el contador</button>
+ 
+ 
   </template>
 
   <style>
