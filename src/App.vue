@@ -1,32 +1,25 @@
 
 <script setup>
 const name="Hola parce";
-const arrayFrutas = [
+const objetoFruta = 
         {
             name: "Manzana",
             price: "$1.00",
             description: "Una manzana",
-        },
-        {
-            name: "Pera",
-            price: "$2.00",
-            description: "Una pera",
-        },
-        {
-            name: "Naranja",
-            price: "$3.00",
-            description: "Una naranja",
-        },
-    ];
+        }
+      
 </script>
 
 <template>
   <h1> Hola {{ name .toUpperCase()}} </h1>
+  {{ objetoFruta }}
   <ul>
-    <li v-for=" (frutas) in arrayFrutas" :key=frutas.name>
-      {{frutas.name}}
+      <li v-for="(value,propiedad,index) in objetoFruta" :key="index">
 
-    </li>
+        {{ index}} - {{ propiedad }} : {{ value }}
+      
+      </li>
+    
   </ul>
   
   </template>
